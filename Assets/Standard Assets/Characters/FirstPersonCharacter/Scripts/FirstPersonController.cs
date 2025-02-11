@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         [SerializeField] private ClimbLadder ladder;
+        [SerializeField] private ClimbLadder ladder2;
         
         private Camera m_Camera;
         private bool m_Jump;
@@ -98,7 +99,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float speed;
             GetInput(out speed);
 
-            if (ladder.GetComponent<ClimbLadder>().getisCliming() == false)
+            if ((ladder.GetComponent<ClimbLadder>().getisCliming() == false)&&(ladder2.GetComponent<ClimbLadder>().getisCliming() == false))
             {
 
 
